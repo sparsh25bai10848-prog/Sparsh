@@ -2,7 +2,7 @@
 
 # Display Menu
 def menu():
-    print("\n--- Financial Management ---")
+    print("\n Financial Management ")
     print("1. Add Income")
     print("2. Add Expense")
     print("3. View Summary")
@@ -16,12 +16,12 @@ while True:
     choice = input("Enter your choice: ")
     if choice == '1':
         amount = float(input("Enter income amount: "))
-        category = input("Enter income category (e.g., Salary, Gift): ")
+        category = input("Enter income category: ")
         transactions.append({'type': 'income', 'amount': amount, 'category': category})
         print("Income added.")
     elif choice == '2':
         amount = float(input("Enter expense amount: "))
-        category = input("Enter expense category (e.g., Food, Rent): ")
+        category = input("Enter expense category: ")
         transactions.append({'type': 'expense', 'amount': amount, 'category': category})
         print("Expense added.")
     elif choice == '3':
@@ -37,13 +37,14 @@ while True:
 
         balance = total_income - total_expense
 
-        print("\n--- Summary ---")
+        print("\n Summary ")
         print("Total Income: ₹", total_income)
         print("Total Expense: ₹", total_expense)
         print("Remaining Balance: ₹", balance)
 
     elif choice == '4':
-        print("Exiting...")
+        print("Exiting")
         break
     else:
         print("Invalid choice. Try again.")
+
